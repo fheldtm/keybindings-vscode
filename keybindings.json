@@ -404,56 +404,83 @@
     {
         "key": "; f",
         "command": "workbench.action.quickOpen",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
+        "when": "resourceScheme == 'file' || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
     },
+
     // close left sidebar
     {
         "key": "; c",
         "command": "workbench.action.closeSidebar",
-        "when": "vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && (sideBarFocus || editorTextFocus)"
+        "when": "resourceScheme == 'file' || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && (sideBarFocus || editorTextFocus)"
     },
     // open file sidebar
     {
         "key": "; v",
         "command": "workbench.view.explorer",
-        "when": "vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && (sideBarFocus || editorTextFocus)"
+        "when": "resourceScheme == 'file' || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && (sideBarFocus || editorTextFocus)"
     },
     // open search sidebar
     {
         "key": "; s",
         "command": "workbench.view.search",
-        "when": "vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && (sideBarFocus || editorTextFocus)"
+        "when": "resourceScheme == 'file' || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && (sideBarFocus || editorTextFocus)"
     },
+    // sidebar cmd to ctrl
+    {
+        "key": "cmd+u",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "list.focusPageUp",
+                "workbench.view.explorer",
+                "workbench.view.explorer"
+            ]
+        },
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "cmd+d",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "list.focusPageDown",
+                "workbench.view.explorer",
+                "workbench.view.explorer"
+            ]
+        },
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+
     // move editor <C-w> alternative s
     {
         "key": "s v",
         "command": "workbench.action.splitEditorRight",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+        "when": "resourceScheme == 'file' || editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
     {
         "key": "s s",
         "command": "workbench.action.splitEditorDown",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+        "when": "resourceScheme == 'file' || editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
     {
         "key": "s h",
         "command": "workbench.action.focusLeftGroup",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+        "when": "resourceScheme == 'file' || editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
     {
         "key": "s j",
         "command": "workbench.action.focusBelowGroup",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+        "when": "resourceScheme == 'file' || editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
     {
         "key": "s k",
         "command": "workbench.action.focusAboveGroup",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+        "when": "resourceScheme == 'file' || editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
     {
         "key": "s l",
         "command": "workbench.action.focusRightGroup",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+        "when": "resourceScheme == 'file' || editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
 
     // quickOpen
@@ -504,24 +531,24 @@
     {
         "key": "t j",
         "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-        "when": "editorTextFocus && !activeEditorGroupEmpty && vim.active && vim.mode == 'Normal'"
+        "when": "resourceScheme == 'file' || editorTextFocus && !activeEditorGroupEmpty && vim.active && vim.mode == 'Normal'"
     },
     // new tab
     {
         "key": "t n t",
         "command": "workbench.action.files.newUntitledFile",
-        "when": "activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
+        "when": "resourceScheme == 'file' || activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
     },
     // new window
     {
         "key": "t n w",
         "command": "workbench.action.newWindow",
-        "when": "activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
+        "when": "resourceScheme == 'file' || activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
     },
     // close tab
     {
         "key": "t x",
         "command": "workbench.action.closeActiveEditor",
-        "when": "activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
+        "when": "resourceScheme == 'file' || activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
     },
 ]
