@@ -549,18 +549,18 @@
     {
         "key": "t n t",
         "command": "workbench.action.files.newUntitledFile",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && !sideBarFocus"
+        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || (activeEditorGroupEmpty && !inputFocus) || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && !sideBarFocus"
     },
     // new window
     {
         "key": "t n w",
         "command": "workbench.action.newWindow",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && !sideBarFocus"
+        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || (activeEditorGroupEmpty && !inputFocus) || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && !sideBarFocus"
     },
     // close tab
     {
         "key": "t x",
         "command": "workbench.action.closeActiveEditor",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || activeEditorGroupEmpty || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && !sideBarFocus"
+        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || (activeEditorGroupEmpty && !inputFocus) || editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && !sideBarFocus"
     },
 ]
