@@ -1,0 +1,69 @@
+{
+  "vim.easymotion": true,
+  "vim.leader": " ",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindings": [
+    // vim undo and redo to editor undo and editor redo
+    {
+      "before": ["u"],
+      "commands": ["undo"],
+    },
+    {
+      "before": ["cmd", "r"],
+      "commands": ["redo"],
+    },
+    {
+      "before": ["ctrl", "r"],
+      "commands": ["redo"],
+    },
+    // move editor <C-w> alternative s
+    {
+      "before": ["s"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["s", "v"],
+      "commands": ["workbench.action.splitEditorRight"],
+    },
+    {
+      "before": ["s", "s"],
+      "commands": ["workbench.action.splitEditorDown"],
+    },
+    {
+      "before": ["s", "h"],
+      "commands": ["workbench.action.focusLeftGroup"],
+    },
+    {
+      "before": ["s", "j"],
+      "commands": ["workbench.action.focusBelowGroup"],
+    },
+    {
+      "before": ["s", "k"],
+      "commands": ["workbench.action.focusAboveGroup"],
+    },
+    {
+      "before": ["s", "l"],
+      "commands": ["workbench.action.focusRightGroup"],
+    },
+    // tab change
+    {
+      "before": ["t", "j"],
+      "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"]
+    },
+    // new tab
+    {
+      "before": ["t", "n", "t"],
+      "commands": ["workbench.action.files.newUntitledFile"],
+    },
+    // new window
+    {
+      "before": ["t", "n", "w"],
+      "commands": ["workbench.action.newWindow"],
+    },
+    // close tab
+    {
+      "before": ["t", "x"],
+      "commands": ["workbench.action.closeActiveEditor"],
+    },
+  ],
+}
