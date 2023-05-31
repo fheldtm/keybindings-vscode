@@ -4,17 +4,30 @@
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindings": [
+    // vim easymotion remap
+    {
+      "before": ["<leader>", "f"],
+      "after": ["<leader>", "<leader>", "s"],
+    },
+    {
+      "before": ["<leader>", "2", "f"],
+      "after": ["<leader>", "<leader>", "2", "s"],
+    },
+    {
+      "before": ["<leader>", "/"],
+      "after": ["<leader>", "<leader>", "/"],
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"],
+    },
     // vim undo and redo to editor undo and editor redo
     {
       "before": ["u"],
       "commands": ["undo"],
     },
     {
-      "before": ["cmd", "r"],
-      "commands": ["redo"],
-    },
-    {
-      "before": ["ctrl", "r"],
+      "before": ["<C-r>"],
       "commands": ["redo"],
     },
     // move editor <C-w> alternative s
