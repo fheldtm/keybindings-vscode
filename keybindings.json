@@ -410,26 +410,43 @@
     {
         "key": "; f",
         "command": "workbench.action.quickOpen",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(activeEditorGroupEmpty && !inputFocus) || (!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
     },
 
     // close left sidebar
     {
         "key": "; c",
         "command": "workbench.action.closeSidebar",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(activeEditorGroupEmpty && !inputFocus) || (!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
     },
     // open file sidebar
     {
         "key": "; v",
         "command": "workbench.view.explorer",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(activeEditorGroupEmpty && !inputFocus) || (!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
     },
     // open search sidebar
     {
         "key": "; s",
         "command": "workbench.view.search",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(activeEditorGroupEmpty && !inputFocus) || (!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+    },
+    // open problem viewer
+    {
+        "key": "; e",
+        "command": "workbench.action.problems.focus",
+        "when": "(activeEditorGroupEmpty && !inputFocus) || (!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+    },
+    // close problem viewer
+    {
+        "key": "cmd+c",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
     },
     // sidebar cmd to ctrl
     {
@@ -538,4 +555,26 @@
         "command": "copyFilePath",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
+
+    // problems viewer remap
+    {
+        "key": "cmd+n",
+        "command": "list.focusDown",
+        "when": "problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
+    },
+    {
+        "key": "cmd+p",
+        "command": "list.focusUp",
+        "when": "problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.problems.focusNext",
+        "when": "problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.problems.focusPrevious",
+        "when": "problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
+    }
 ]
