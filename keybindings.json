@@ -506,5 +506,36 @@
         "key": "t n t",
         "command": "workbench.action.files.newUntitledFile",
         "when": "activeEditorGroupEmpty && !inputFocus"
-    }
+    },
+    // explorer new file and delete file
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "x",
+        "command": "moveFileToTrash",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "shift+x",
+        "command": "deleteFile",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "p",
+        "command": "copyRelativeFilePath",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "shift+p",
+        "command": "copyFilePath",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
 ]
