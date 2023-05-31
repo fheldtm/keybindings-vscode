@@ -555,6 +555,16 @@
         "command": "copyFilePath",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
+    {
+        "key": "o",
+        "command": "explorer.openAndPassFocus",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "v",
+        "command": "filesExplorer.openFilePreserveFocus",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
 
     // problems viewer remap
     {
