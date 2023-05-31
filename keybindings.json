@@ -410,26 +410,26 @@
     {
         "key": "; f",
         "command": "workbench.action.quickOpen",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
     },
 
     // close left sidebar
     {
         "key": "; c",
         "command": "workbench.action.closeSidebar",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
     },
     // open file sidebar
     {
         "key": "; v",
         "command": "workbench.view.explorer",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
     },
     // open search sidebar
     {
         "key": "; s",
         "command": "workbench.view.search",
-        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
+        "when": "(!terminalFocus && resourceScheme == 'file' && resourceLangId == 'image') || vim.active && !inDebugRepl && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'EasyMotionInputMode' && ((sideBarFocus && !inputFocus) || editorTextFocus)"
     },
     // sidebar cmd to ctrl
     {
@@ -511,31 +511,31 @@
     {
         "key": "a",
         "command": "explorer.newFile",
-        "when": "explorerViewletFocus && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
     {
         "key": "x",
         "command": "moveFileToTrash",
-        "when": "explorerViewletFocus && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
     {
         "key": "shift+x",
         "command": "deleteFile",
-        "when": "explorerViewletFocus && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
     {
         "key": "r",
         "command": "renameFile",
-        "when": "explorerViewletFocus && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
     {
         "key": "p",
         "command": "copyRelativeFilePath",
-        "when": "explorerViewletFocus && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
     {
         "key": "shift+p",
         "command": "copyFilePath",
-        "when": "explorerViewletFocus && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
 ]
