@@ -2,6 +2,7 @@
   "vim.easymotion": true,
   "vim.leader": " ",
   "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindings": [
     // vim undo and redo to editor undo and editor redo
     {
