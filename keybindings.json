@@ -228,10 +228,6 @@
         "when": "canNavigateBack"
     },
     {
-        "key": "cmd+]",
-        "command": "workbench.action.nextEditor"
-    },
-    {
         "key": "alt+cmd+right",
         "command": "-workbench.action.nextEditor"
     },
@@ -244,10 +240,6 @@
         "key": "alt+cmd+right",
         "command": "-workbench.action.terminal.focusNextPane",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "cmd+[",
-        "command": "workbench.action.previousEditor"
     },
     {
         "key": "alt+cmd+left",
@@ -586,5 +578,45 @@
         "key": "ctrl+p",
         "command": "workbench.action.problems.focusPrevious",
         "when": "problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
-    }
+    },
+    // definition
+    {
+        "key": "cmd+]",
+        "command": "editor.action.revealDefinition",
+        "when": "isMac && editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "editor.action.revealDefinition",
+        "when": "!isMac && editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+c",
+        "command": "closeReferenceSearchEditor",
+        "when": "inReferenceSearchEditor || referenceSearchVisible"
+    },
+    {
+        "key": "cmd+n",
+        "command": "selectNextCodeAction",
+        "when": "isMac && codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextCodeAction",
+        "when": "!isMac && codeActionMenuVisible"
+    },
+    {
+        "key": "cmd+p",
+        "command": "selectPrevCodeAction",
+        "when": "isMac && codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevCodeAction",
+        "when": "!isMac && codeActionMenuVisible"
+    },
 ]
