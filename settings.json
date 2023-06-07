@@ -1,84 +1,89 @@
 {
-  "explorer.compactFolders": false,
-  "vim.easymotion": true,
-  "vim.leader": " ",
-  "vim.hlsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.normalModeKeyBindings": [
-    // vim easymotion remap
-    {
-      "before": ["<leader>", "f"],
-      "after": ["<leader>", "<leader>", "s"],
-    },
-    {
-      "before": ["<leader>", "2", "f"],
-      "after": ["<leader>", "<leader>", "2", "s"],
-    },
-    {
-      "before": ["<leader>", "/"],
-      "after": ["<leader>", "<leader>", "/"],
-    },
-    {
-      "before": ["<leader>", "l"],
-      "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"],
-    },
-    // vim undo and redo to editor undo and editor redo
-    {
-      "before": ["u"],
-      "commands": ["undo"],
-    },
-    {
-      "before": ["<C-r>"],
-      "commands": ["redo"],
-    },
-    // move editor <C-w> alternative s
-    {
-      "before": ["s"],
-      "after": ["<Nop>"]
-    },
-    {
-      "before": ["s", "v"],
-      "commands": ["workbench.action.splitEditorRight"],
-    },
-    {
-      "before": ["s", "s"],
-      "commands": ["workbench.action.splitEditorDown"],
-    },
-    {
-      "before": ["s", "h"],
-      "commands": ["workbench.action.focusLeftGroup"],
-    },
-    {
-      "before": ["s", "j"],
-      "commands": ["workbench.action.focusBelowGroup"],
-    },
-    {
-      "before": ["s", "k"],
-      "commands": ["workbench.action.focusAboveGroup"],
-    },
-    {
-      "before": ["s", "l"],
-      "commands": ["workbench.action.focusRightGroup"],
-    },
-    // tab change
-    {
-      "before": ["t", "j"],
-      "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"]
-    },
-    // new tab
-    {
-      "before": ["t", "n", "t"],
-      "commands": ["workbench.action.files.newUntitledFile"],
-    },
-    // new window
-    {
-      "before": ["t", "n", "w"],
-      "commands": ["workbench.action.newWindow"],
-    },
-    // close tab
-    {
-      "before": ["t", "x"],
-      "commands": ["workbench.action.closeActiveEditor"],
-    },
-  ],
+    "explorer.compactFolders": false,
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindings": [
+        // vim easymotion remap
+        {
+            "before": ["<leader>", "f"],
+            "after": ["<leader>", "<leader>", "s"],
+        },
+        {
+            "before": ["<leader>", "2", "f"],
+            "after": ["<leader>", "<leader>", "2", "s"],
+        },
+        {
+            "before": ["<leader>", "/"],
+            "after": ["<leader>", "<leader>", "/"],
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"],
+        },
+        // vim undo and redo to editor undo and editor redo
+        {
+            "before": ["u"],
+            "commands": ["undo"],
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": ["redo"],
+        },
+        // move editor <C-w> alternative s
+        {
+            "before": ["s"],
+            "after": ["<Nop>"]
+        },
+        {
+            "before": ["s", "v"],
+            "commands": ["workbench.action.splitEditorRight"],
+        },
+        {
+            "before": ["s", "s"],
+            "commands": ["workbench.action.splitEditorDown"],
+        },
+        {
+            "before": ["s", "h"],
+            "commands": ["workbench.action.focusLeftGroup"],
+        },
+        {
+            "before": ["s", "j"],
+            "commands": ["workbench.action.focusBelowGroup"],
+        },
+        {
+            "before": ["s", "k"],
+            "commands": ["workbench.action.focusAboveGroup"],
+        },
+        {
+            "before": ["s", "l"],
+            "commands": ["workbench.action.focusRightGroup"],
+        },
+        // tab change
+        {
+            "before": ["t", "j"],
+            "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"]
+        },
+        // new tab
+        {
+            "before": ["t", "n", "t"],
+            "commands": ["workbench.action.files.newUntitledFile"],
+        },
+        // new window
+        {
+            "before": ["t", "n", "w"],
+            "commands": ["workbench.action.newWindow"],
+        },
+        // close tab
+        {
+            "before": ["t", "x"],
+            "commands": ["workbench.action.closeActiveEditor"],
+        },
+        // show definition
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        }
+    ],
 }
