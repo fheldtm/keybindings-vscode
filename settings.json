@@ -1,93 +1,211 @@
 {
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "editor.formatOnSave": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "editor.fontWeight": 400,
+  "editor.fontFamily": "'IBM Plex Mono', 'D2Coding', Consolas",
+  "editor.tabSize": 2,
+  "terminal.integrated.fontFamily": "'Hack Nerd Font', 'ubuntu mono derivative powerline'",
+  "terminal.integrated.fontWeight": "normal",
+  "prettier.singleQuote": true,
+  "files.eol": "\r\n",
+  "prettier.endOfLine": "crlf",
+  "editor.stickyScroll.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.validate": ["javascript", "typescript", "vue"],
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+  "editor.largeFileOptimizations": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.hover.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "files.associations": {
+    "*.css": "css"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
   },
   "explorer.compactFolders": false,
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editorAssociations": {
+    "*.vsix": "default"
+  },
+  "window.commandCenter": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "terminal.integrated.fontSize": 13,
+  "editor.formatOnSave": true,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "editor.lineHeight": 0,
+  "editor.fontSize": 13,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.iconTheme": "material-icon-theme",
+
+  // edtior inlayHints options
+  "editor.inlayHints.fontFamily": "'D2Coding', 'IBM Plex Mono', Consolas",
+  "editor.inlayHints.padding": true,
+  "workbench.colorCustomizations": {
+    "editorInlayHint.foreground": "#858a94",
+    "editorInlayHint.background": "#2d2e32"
+  },
+
+  // typescript inlayHints
+  "typescript.inlayHints.parameterTypes.enabled": false,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+  "typescript.inlayHints.enumMemberValues.enabled": false,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+  "javascript.inlayHints.parameterTypes.enabled": false,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "javascript.inlayHints.variableTypes.enabled": false,
+  "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+  "javascript.inlayHints.enumMemberValues.enabled": false,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // Neovim Settings
+  "vscode-neovim.compositeTimeout": 100,
+  "remote.SSH.remotePlatform": {
+    "cjlee.iptime.org": "macOS"
+  },
+  "editor.minimap.enabled": true,
+  "files.autoSave": "off",
+  "editor.lineNumbers": "relative",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
   "vim.easymotion": true,
   "vim.leader": " ",
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
   "vim.normalModeKeyBindings": [
-      // vim easymotion remap
-      {
-          "before": ["<leader>", "f"],
-          "after": ["<leader>", "<leader>", "s"],
-      },
-      {
-          "before": ["<leader>", "2", "f"],
-          "after": ["<leader>", "<leader>", "2", "s"],
-      },
-      {
-          "before": ["<leader>", "/"],
-          "after": ["<leader>", "<leader>", "/"],
-      },
-      {
-          "before": ["<leader>", "l"],
-          "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"],
-      },
-      // vim undo and redo to editor undo and editor redo
-      {
-          "before": ["u"],
-          "commands": ["undo"],
-      },
-      {
-          "before": ["<C-r>"],
-          "commands": ["redo"],
-      },
-      // move editor <C-w> alternative s
-      {
-          "before": ["s"],
-          "after": ["<Nop>"]
-      },
-      {
-          "before": ["s", "v"],
-          "commands": ["workbench.action.splitEditorRight"],
-      },
-      {
-          "before": ["s", "s"],
-          "commands": ["workbench.action.splitEditorDown"],
-      },
-      {
-          "before": ["s", "h"],
-          "commands": ["workbench.action.focusLeftGroup"],
-      },
-      {
-          "before": ["s", "j"],
-          "commands": ["workbench.action.focusBelowGroup"],
-      },
-      {
-          "before": ["s", "k"],
-          "commands": ["workbench.action.focusAboveGroup"],
-      },
-      {
-          "before": ["s", "l"],
-          "commands": ["workbench.action.focusRightGroup"],
-      },
-      // tab change
-      {
-          "before": ["t", "j"],
-          "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"]
-      },
-      // new tab
-      {
-          "before": ["t", "n", "t"],
-          "commands": ["workbench.action.files.newUntitledFile"],
-      },
-      // new window
-      {
-          "before": ["t", "n", "w"],
-          "commands": ["workbench.action.newWindow"],
-      },
-      // close tab
-      {
-          "before": ["t", "x"],
-          "commands": ["workbench.action.closeActiveEditor"],
-      },
-      // show definition
-      {
-          "before": ["K"],
-          "commands": ["editor.action.showHover"]
-      }
-  ],
+    // vim easymotion remap
+    {
+      "before": ["<leader>", "f"],
+      "after": ["<leader>", "<leader>", "s"]
+    },
+    {
+      "before": ["<leader>", "2", "f"],
+      "after": ["<leader>", "<leader>", "2", "s"]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "after": ["<leader>", "<leader>", "/"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+    },
+    // vim undo and redo to editor undo and editor redo
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    },
+    // move editor <C-w> alternative s
+    {
+      "before": ["s"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["s", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["s", "c"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["s", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["s", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["s", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["s", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["s", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // tab change
+    {
+      "before": ["t", "j"],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
+    // new tab
+    {
+      "before": ["t", "n", "t"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    // new window
+    {
+      "before": ["t", "n", "w"],
+      "commands": ["workbench.action.newWindow"]
+    },
+    // close tab
+    {
+      "before": ["t", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // show definition
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ]
 }
+
