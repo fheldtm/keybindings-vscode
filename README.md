@@ -1,1 +1,1 @@
-# keybindings-vscode
+# keybindings for vscode
